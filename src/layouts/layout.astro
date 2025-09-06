@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      BTG Pactual | Evento Proyecciones Financieras en tiempos de Presupuesto
+    </title>
+    <meta
+      name="description"
+      content="BTG Pactual | Evento Proyecciones Financieras en tiempos de Presupuesto"
+    />
+    <link rel="icon" type="image/ico" href="../favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <meta
+      property="og:title"
+      content="BTG Pactual | Evento Proyecciones Financieras en tiempos de Presupuesto"
+    />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-btg-bg-blue);
+    color: #fff;
+    font-family: "BTG Pactual Office", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.125rem;
+  }
+</style>

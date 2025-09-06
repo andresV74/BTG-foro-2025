@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: 'BTG Pactual Office';
+	src: url('/fonts/BTGSans-Bd.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'BTG Pactual Office';
+	src: url('/fonts/BTGSans-Lt.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'BTG Pactual Office';
+	src: url('/fonts/BTGSans-Rg.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'BTG Pactual Office';
+	src: url('/fonts/BTGSans-Sb.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--color-stripe-1: #0B2859;
+	--color-stripe-2: #10408D;
+	--color-stripe-3: #195AB4;
+	--color-stripe-4: #307AE0;
+	--color-blue-1: #6BAAFF;
+	--color-blue-2: #061935;
+	--color-blue-3: #0B2859;
+	--color-blue-4: #307AE0;
+	--color-btg-bg-blue: #05132A;
+	--color-gradient-blue: #216BAA;
+}

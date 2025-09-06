@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import SFC from "@/assets/img-sfc.webp";
+import LinkedIn from "@/assets/ico-linkedIn.svg";
+import Instagram from "@/assets/ico-instagram.svg";
+import YouTube from "@/assets/ico-youTube.svg";
+import Spotify from "@/assets/ico-spotify.svg";
+---
+
+<footer class="mt-8.5 lg:mt-17.5 mb-10.5 lg:mb-16">
+  <div
+    class="flex gap-y-9 lg:gap-y-7.5 gap-x-4.5 lg:gap-x-25 max-w-6xl mx-auto px-4 lg:px-0"
+  >
+    <Image
+      class="self-end row-span-full"
+      src={SFC}
+      alt="VIGILADO SUPERINTENDENCIA FINANCIERA DE COLOMBIA"
+    />
+    <div>
+      <ul class="text-center lg:flex lg:gap-12 lg:justify-start lg:text-lg">
+        <li>
+          <a
+            class="underline hover:no-underline"
+            href="https://www.btgpactual.com.co"
+            target="_blank">www.btgpactual.com.co</a
+          >
+        </li>
+        <li>
+          <a
+            class="underline hover:no-underline"
+            href="https://www.btgpactual.com.co/contacto"
+            target="_blank">Contacto</a
+          >
+        </li>
+        <li>
+          <a
+            class="underline hover:no-underline"
+            href="https://www.btgpactual.com.co/terminos_de_uso"
+            target="_blank">Términos de uso</a
+          >
+        </li>
+        <li>
+          <a
+            class="underline hover:no-underline"
+            href="https://www.btgpactual.com.co/proteccion-de-datos"
+            target="_blank">Protección de datos</a
+          >
+        </li>
+      </ul>
+      <ul
+        class="flex flex-nowrap items-center justify-between lg:justify-start gap-10 lg:gap-22 mt-9 lg:mt-12 mb-10"
+      >
+        <li>
+          <a
+            href="https://www.linkedin.com/company/btg-pactual-col/"
+            target="_blank"
+            aria-label="Perfil en LinkedIn de BTG Pactual Colombia"
+            ><LinkedIn />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/btgpactualcolombia/"
+            target="_blank"
+            aria-label="Perfil en Instagram de BTG Pactual Colombia"
+            ><Instagram />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@btgpactualcol"
+            target="_blank"
+            aria-label="Canal de YouTube de BTG Pactual Colombia"
+            rel="noopener noreferrer"
+            ><YouTube />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://open.spotify.com/show/6022jBYastUKXWxZjwK7K2"
+            target="_blank"
+            aria-label="Canal de Spotify de BTG Pactual Colombia"
+            rel="noopener noreferrer"
+            ><Spotify />
+          </a>
+        </li>
+      </ul>
+      <p class="text-lg lg:text-xl mb-7">© 2021 BTG Pactual</p>
+      <p class="text-xs lg:text-sm">
+        Las entidades Banco BTG Pactual Colombia S.A., BTG Pactual S.A.
+        Comisionista de Bolsa y BTG Pactual Sociedad Fiduciaria S.A. hacen parte
+        del Conglomerado Financiero BTG Pactual en Colombia, reconocido por la
+        Superintendencia Financiera de Colombia.
+      </p>
+    </div>
+  </div>
+</footer>
