@@ -1,5 +1,6 @@
-# BTG Foro 2025 :: Landing page
+# WARP.md
 
+This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
 ## Project Overview
 
@@ -24,7 +25,7 @@ This is the landing page for "Gran Foro Colombia 2025" - a BTG Pactual event lan
 ### Project Structure
 ```
 src/
-├── layouts/          # Page layouts (layout.astro)
+├── layouts/           # Page layouts (layout.astro)
 ├── pages/            # Route pages (index.astro)
 ├── sections/         # Reusable page sections (Header.astro, Footer.astro)
 ├── assets/           # Static assets (SVGs, images)

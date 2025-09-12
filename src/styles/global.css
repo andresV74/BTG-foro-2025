@@ -2,8 +2,8 @@
 
 @font-face {
 	font-family: 'BTG Pactual Office';
-	src: url('/fonts/BTGSans-Bd.woff2') format('woff2');
-	font-weight: bold;
+	src: url('/fonts/BTGSans-Hl.woff2') format('woff2');
+	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
 }
@@ -32,15 +32,28 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'BTG Pactual Office';
+	src: url('/fonts/BTGSans-Bd.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'BTG Pactual Office';
+	src: url('/fonts/BTGSans-Eb.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
 @theme {
-	--color-stripe-1: #0B2859;
-	--color-stripe-2: #10408D;
-	--color-stripe-3: #195AB4;
-	--color-stripe-4: #307AE0;
-	--color-blue-1: #6BAAFF;
-	--color-blue-2: #061935;
-	--color-blue-3: #0B2859;
+	--color-blue-1: #D2E5FF;
+	--color-blue-2: #87BAFF;
+	--color-blue-3: #549CFF;
 	--color-blue-4: #307AE0;
-	--color-btg-bg-blue: #05132A;
-	--color-gradient-blue: #216BAA;
+	--color-blue-5: #195AB4;
+	--color-blue-6: #0B2859;
+	--color-blue-7: #05132A;
 }

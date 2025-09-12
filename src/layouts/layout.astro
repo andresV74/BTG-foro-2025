@@ -7,13 +7,12 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
     <title>
-      BTG Pactual | Evento Proyecciones Financieras en tiempos de Presupuesto
+      Gran foro Colombia 2025
     </title>
     <meta
       name="description"
-      content="BTG Pactual | Evento Proyecciones Financieras en tiempos de Presupuesto"
+      content="Gran foro Colombia 2025"
     />
     <link rel="icon" type="image/ico" href="../favicon.ico" />
     <link
@@ -36,9 +35,9 @@ import "../styles/global.css";
     <link rel="manifest" href="../site.webmanifest" />
     <meta
       property="og:title"
-      content="BTG Pactual | Evento Proyecciones Financieras en tiempos de Presupuesto"
+      content="Gran foro Colombia 2025"
     />
-    <meta property="og:image" content="/android-chrome-512x512.png" />
+    <meta property="og:image" content="../android-chrome-512x512.png" />
   </head>
   <body>
     <slot />
@@ -46,14 +45,15 @@ import "../styles/global.css";
 </html>
 
 <style is:global>
+  :root {
+    interpolate-size: allow-keywords;
+  }
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--color-btg-bg-blue);
     color: #fff;
     font-family: "BTG Pactual Office", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.125rem;
   }
 </style>

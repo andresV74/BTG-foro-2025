@@ -1,0 +1,47 @@
+---
+import Poster from "@/components/poster.astro";
+import Info from "@/components/EventInfo.astro";
+import Logo from "@/assets/img-logo.svg";
+import Image from "astro/components/Image.astro";
+import Map from "@/assets/img-map.webp";
+---
+
+<header
+  class="header pt-9.5 lg:pt-14 pb-15 lg:px-10"
+>
+  <h1 aria-label="BTG Pactual" class="max-w-[1440px] mx-9 lg:mx-auto">
+    <Logo width={225} />
+  </h1>
+  <div
+    class="w-full max-w-[1440px] lg:mx-auto mt-10 md:px-9 lg:px-0 flex flex-col md:flex-row items-center md:items-end justify-center gap-y-15"
+  >
+    <Poster
+      p1="Política y Finanzas"
+      p2="en América Latina"
+      width="w-77.5"
+      fontSize="text-[16px]"
+    />
+    <Info />
+    <Image
+      src={Map}
+      alt="Mapa de Colombia"
+      loading="eager"
+      class="map hidden xl:block"
+    />
+  </div>
+</header>
+
+<style>
+  .header {
+    background-image: url('../assets/bg-header-mobile.jpg');
+    background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url('../assets/bg-header-desktop.jpg');
+    }
+  }
+
+  .map {
+    width: clamp(400px, -42rem + 83.75vw, 534px);
+  }
+</style>

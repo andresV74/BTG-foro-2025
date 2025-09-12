@@ -1,9 +1,85 @@
 ---
-import Layout from '@/layouts/layout.astro';
-import Footer from '@/sections/Footer.astro';
+import Layout from "@/layouts/layout.astro";
+import Header from "@/sections/Header.astro";
+import Form from "@/components/Form.astro";
+import Quote from "@/sections/Quote.astro";
+import StripesUp from "@/components/stripesUp.astro";
+import StripesDown from "@/components/stripesDown.astro";
+import Speakers from "@/sections/Speakers.astro";
+import Panel from "@/sections/Panel.astro";
+import Banners from "@/sections/FinalBanners.astro";
+import Footer from "@/sections/Footer.astro";
+import Button from "@/components/Button.astro";
+
+import { speakersData } from "@/consts/speakers";
 ---
 
 <Layout>
-	<h1>BTG Gran Foro 2025</h1>
-	<Footer />
+  <Header />
+  <Form />
+  <Quote />
+  <StripesUp />
+  {
+    speakersData.map(
+      ({ color, image, name, position_1, position_2, description }) => (
+        <Speakers
+          color={color}
+          image={image}
+          name={name}
+          position_1={position_1}
+          position_2={position_2}
+          description={description}
+        />
+      )
+    )
+  }
+  <Panel />
+  <StripesDown />
+  <Banners />
+  <Footer />
+  <div class="fixed bottom-5 right-2 lg:bottom-10 lg:right-10">
+    <Button buttonClass="floating-button hidden" width="w-13" />
+  </div>
 </Layout>
+
+<script>
+  const buttons = [
+    ...document.querySelectorAll(".form-button"),
+  ] as HTMLButtonElement[];
+  const headerButton = document.querySelector(
+    ".header-button"
+  ) as HTMLButtonElement;
+  const floatingButton = document.querySelector(
+    ".floating-button"
+  ) as HTMLButtonElement;
+  const form = document.querySelector("#subscribe-form") as HTMLFormElement;
+
+  buttons.forEach((button) => {
+    button?.addEventListener("click", function () {
+      const header = document.querySelector(".header") as HTMLElement;
+      const headerHeight = header?.offsetHeight || 0;
+
+      if (form?.clientHeight === 0) {
+        window.scrollTo({
+          top: headerHeight,
+          behavior: "smooth",
+        });
+      }
+      form?.classList.toggle("visible");
+    });
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          floatingButton?.classList.add("hidden");
+        } else {
+          floatingButton?.classList.remove("hidden");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(headerButton);
+</script>
