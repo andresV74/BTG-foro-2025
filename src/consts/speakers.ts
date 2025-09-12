@@ -1,23 +1,25 @@
 import type { TSpeaker } from '@/types/speaker';
 
-import speakerImg1 from '@/assets/img-speaker-1@2x.webp';
-import speakerImg2 from '@/assets/img-Roberto-Sallouti.webp';
+import speakerImg1 from '@/assets/img-Roberto-Sallouti.webp';
+import speakerImg2 from '@/assets/img-Michael-Stott.webp';
 
 export const speakersData: TSpeaker[] = [
 	{
 		color: 'bg-blue-5',
+		title: 'Estrategias para un crecimiento sostenible',
 		image: speakerImg1,
-		name: 'Luis\nFernando\nMejía',
-		position_1: 'Director Ejecutivo',
-		position_2: 'Fedesarrollo',
-		description: "Con más de 12 años de experiencia en economía aplicada, Alejandro ha trabajado como asesor para organismos multilaterales y gobiernos en América Latina. Ha liderado proyectos de evaluación de políticas públicas, crecimiento económico y sostenibilidad fiscal. Es Magíster en Economía Aplicada de la Universidad de los Andes y ha sido consultor para el Banco Interamericano de Desarrollo y el Ministerio de Hacienda de Colombia. Su enfoque combina el rigor técnico con una visión práctica para generar mpacto en la toma de decisiones. Actualmente es Consultor Senior en Estrategia y Finanzas Públicas, acompañando a diferentes países en el diseño de modelos económicos que fomentan la competitividad y la inclusión social."
-	},
-	{
-		color: 'bg-blue-6',
-		image: speakerImg2,
 		name: 'Roberto\nSallouti',
-		position_1: 'Director Ejecutivo',
+		position_1: 'CEO',
 		position_2: 'BTG Pactual',
-		description: "Roberto Sallouti es director ejecutivo y miembro del consejo de administración de BTG Pactual. También es presidente de los consejos de administración de Inteli y Banco Pan, miembro del consejo de administración de V.tal y miembro del consejo asesor de la Wharton School y Parceiros da Educação.\n\nSallouti es licenciado en Economía por la Wharton School de la Universidad de Pensilvania. Se incorporó a BTG Pactual en 1994 y se convirtió en socio en 1998. Comenzó su carrera en renta fija, se convirtió en director de operaciones en 2008 y en director ejecutivo en 2015.\n\nComo filántropo, Sallouti ha dedicado sus esfuerzos a la educación, siendo reconocido por su colaboración con la Brazil Foundation y la Cámara Legislativa de São Paulo. Es cofundador de Inteli (Instituto de Tecnología y Liderazgo), una universidad sin ánimo de lucro comprometida con el desarrollo de los futuros líderes tecnológicos de Brasil, ha apoyado diversas iniciativas educativas para estudiantes de escuelas públicas y ha concedido becas en Wharton, Graded e Inteli."
-	}
+		description: "CEO de BTG Pactual\n\nCuenta con más de 30 años de trayectoria en el sector financiero. Economista de la Wharton School de la Universidad de Pennsylvania. Ingresó a BTG Pactual en 1994 y en 2008 fue nombrado COO, liderando las divisiones de Renta Fija locales e internacionales.\n\nDesde 2015 es CEO del banco, posición desde la cual ha consolidado a BTG Pactual como una de las instituciones más influyentes de América Latina, impulsando la innovación y la expansión global. También hace parte de su Consejo de Administración, donde contribuye a definir la estrategia corporativa con énfasis en sostenibilidad y crecimiento."
+	},
+		{
+		color: 'bg-blue-6',
+		title: 'Estrategias para un crecimiento sostenido',
+		image: speakerImg2,
+		name: 'Michael\nStott',
+		position_1: 'Editor para América Latina',
+		position_2: 'Financial Times',
+		description: "Editor para América Latina del Financial Times, con sede en Brasil.\n\nPeriodista con amplia trayectoria internacional, inició en Reuters como corresponsal en Alemania, Brasil, Colombia y México, y luego como jefe de la oficina en Moscú y editor regional para Europa, Medio Oriente y África.\n\nDesde 2014 en el Financial Times, ha ocupado roles de liderazgo como editor de noticias del Reino Unido y managing editor del Nikkei Asian Review en Tokio, donde lideró su transformación digital.\n\nEspecializado en política, negocios y geopolítica, escribe columnas sobre América Latina y modera foros internacionales. Es graduado en Lenguas Modernas de la Universidad de Cambridge y domina español, portugués, francés, alemán y ruso."
+	},
 ]

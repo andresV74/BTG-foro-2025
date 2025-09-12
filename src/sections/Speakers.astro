@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 
 interface Props {
   color: string;
+  title: string;
   image: ImageMetadata;
   name: string;
   position_1: string;
@@ -10,26 +11,27 @@ interface Props {
   description: string;
 }
 
-const { color, image, name, position_1, position_2, description } = Astro.props;
+const { color, title, image, name, position_1, position_2, description } = Astro.props;
 ---
 
 <section class=`${color} py-5 lg:py-24 px-5 lg:px-18`>
   <div
-    class="mx-auto max-w-[1300px] p-3 lg:p-11.5 border border-white flex flex-col lg:flex-row"
+  class="mx-auto max-w-[1300px] p-3 lg:p-11.5 border border-white flex lg:grid lg:grid-cols-[auto_1fr] flex-col"
   >
+    <h2 class="pb-3 lg:pb-5 font-semibold text-2xl/6 lg:text-5xl tracking-tighter lg:col-span-2 ">{title}</h2>
     <div class="bg-blue-6 px-7 pt-5 pb-9 shrink-0 max-w-100">
       <Image src={image} alt={name} width={345} />
-      <p
+      <h3
         class="mt-7 font-light text-[2.5rem]/8 pb-2 whitespace-pre-wrap"
       >{name}
-      </p>
+      </h3>
       <div class="bg-blue-5 h-1 w-60"></div>
       <p class="font-light text-[1.75rem]/7 mt-2">{position_1}</p>
       <p class="font-light text-[2.5rem]/10">{position_2}</p>
     </div>
     <div class="bg-blue-7">
       <p
-        class="text-[1.25rem]/5 lg:text-[1.5rem]/7 py-10 px-7 lg:px-13 whitespace-pre-wrap"
+        class="text-[1.25rem]/5 lg:text-[1.5rem]/7 text-pretty py-10 px-7 lg:px-13 whitespace-pre-wrap"
       >{description}
       </p>
     </div>

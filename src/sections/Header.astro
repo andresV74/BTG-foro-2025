@@ -1,9 +1,16 @@
 ---
 import Poster from "@/components/poster.astro";
 import Info from "@/components/EventInfo.astro";
+import Response from "@/components/responseInfo.astro";
 import Logo from "@/assets/img-logo.svg";
 import Image from "astro/components/Image.astro";
 import Map from "@/assets/img-map.webp";
+
+interface Props {
+  page: "home" | "response";
+}
+
+const { page } = Astro.props;
 ---
 
 <header
@@ -21,7 +28,9 @@ import Map from "@/assets/img-map.webp";
       width="w-77.5"
       fontSize="text-[16px]"
     />
-    <Info />
+    {
+      page === "home" ? <Info /> : <Response />
+    }
     <Image
       src={Map}
       alt="Mapa de Colombia"

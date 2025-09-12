@@ -15,15 +15,16 @@ import { speakersData } from "@/consts/speakers";
 ---
 
 <Layout>
-  <Header />
+  <Header page="home" />
   <Form />
   <Quote />
   <StripesUp />
   {
     speakersData.map(
-      ({ color, image, name, position_1, position_2, description }) => (
+      ({ color, title, image, name, position_1, position_2, description }) => (
         <Speakers
           color={color}
+          title={title}
           image={image}
           name={name}
           position_1={position_1}
@@ -38,7 +39,7 @@ import { speakersData } from "@/consts/speakers";
   <Banners />
   <Footer />
   <div class="fixed bottom-5 right-2 lg:bottom-10 lg:right-10">
-    <Button buttonClass="floating-button hidden" width="w-13" />
+    <Button buttonClass="floating-button hidden" text_1="Regístrese" text_2="ahora" width="w-13" />
   </div>
 </Layout>
 
@@ -55,7 +56,8 @@ import { speakersData } from "@/consts/speakers";
   const form = document.querySelector("#subscribe-form") as HTMLFormElement;
 
   buttons.forEach((button) => {
-    button?.addEventListener("click", function () {
+    button?.addEventListener("click", function (e) {
+      e.preventDefault();
       const header = document.querySelector(".header") as HTMLElement;
       const headerHeight = header?.offsetHeight || 0;
 

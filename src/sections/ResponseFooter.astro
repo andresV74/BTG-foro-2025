@@ -1,0 +1,22 @@
+---
+import Info from "@/components/BasicInfo.astro";
+import Calendars from "@/components/Calendars.astro";
+---
+
+<section class="quote py-15 px-5 lg:px-10">
+  <div class="w-full max-w-[1303px] mx-auto lg:flex lg:gap-55">
+    <Info />
+    <Calendars apple="#" gmail="#" outlook="#" outlookCom="" # />
+  </div>
+</section>
+
+<style>
+  .quote {
+    background-image: url("../assets/bg-quote-mobile.jpg");
+    background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url("../assets/bg-quote-desktop.jpg");
+    }
+  }
+</style>

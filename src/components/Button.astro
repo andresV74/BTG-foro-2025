@@ -2,26 +2,40 @@
 import Icon from "@/assets/ico-button.svg";
 
 interface Props {
-	buttonClass?: string;
+  buttonClass?: string;
+  url?: string;
+  text_1: string;
+  text_2: string;
   width?: string;
 }
 
-const { buttonClass = "header-button", width = "w-auto" } = Astro.props;
+const {
+  buttonClass = "header-button",
+  url = "#",
+  text_1,
+  text_2,
+  width = "w-auto",
+} = Astro.props;
 ---
 
-<button class=`${buttonClass} ${width} form-button` aria-label="Regístrese ahora">
+<a
+  href={url}
+  class=`${buttonClass} ${width} form-button`
+  aria-label="Regístrese ahora"
+  target={url === "#" ? "_self" : "_blank"}
+>
   <Icon width={18} class="me-2 shrink-0" />
   <span
     class="font-black text-[2rem]/8 lg:text-[2.125rem]/8 text-blue-3 tracking-tighter me-2"
   >
-    Regístrese
+    {text_1}
   </span>
   <span
     class="font-light text-[2.25rem]/9 lg:text-[2.75rem]/11 text-blue-2 tracking-tighter"
   >
-    ahora
+    {text_2}
   </span>
-</button>
+</a>
 
 <style>
   .form-button {
@@ -34,14 +48,15 @@ const { buttonClass = "header-button", width = "w-auto" } = Astro.props;
     overflow: hidden;
     padding-inline: 16px;
     transition: all 0.3s ease-in-out;
-		visibility: visible;
+    visibility: visible;
+    width: fit-content;
 
-		&.hidden {
-			border-width: 0;
-			padding: 0;
-			visibility: hidden;
-			width: 0;
-		}
+    &.hidden {
+      border-width: 0;
+      padding: 0;
+      visibility: hidden;
+      width: 0;
+    }
 
     &:hover {
       background-color: var(--color-blue-7);
