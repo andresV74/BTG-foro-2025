@@ -38,33 +38,25 @@ import { speakersData } from "@/consts/speakers";
   <StripesDown />
   <Banners />
   <Footer />
-  <div class="fixed bottom-5 right-2 lg:bottom-10 lg:right-10">
-    <Button buttonClass="floating-button hidden" text_1="Regístrese" text_2="ahora" width="w-13" />
+  <div class="fixed bottom-22 right-2 lg:right-3">
+    <Button buttonClass="floating-button hidden" text_1="Regístrese" text_2="ahora" />
   </div>
 </Layout>
 
 <script>
-  const buttons = [
-    ...document.querySelectorAll(".form-button"),
-  ] as HTMLButtonElement[];
-  const headerButton = document.querySelector(
-    ".header-button"
-  ) as HTMLButtonElement;
   const floatingButton = document.querySelector(
     ".floating-button"
   ) as HTMLButtonElement;
   const form = document.querySelector("#subscribe-form") as HTMLFormElement;
 
-  buttons.forEach((button) => {
-    button?.addEventListener("click", function (e) {
-      e.preventDefault();
-      const header = document.querySelector(".header") as HTMLElement;
-      const headerHeight = header?.offsetHeight || 0;
+  floatingButton?.addEventListener("click", function (e) {
+    e.preventDefault();
+    const header = document.querySelector(".header") as HTMLElement;
+    const headerHeight = header?.offsetHeight || 0;
 
-      window.scrollTo({
-        top: headerHeight,
-        behavior: "smooth",
-      });
+    window.scrollTo({
+      top: headerHeight,
+      behavior: "smooth",
     });
   });
 
@@ -80,5 +72,5 @@ import { speakersData } from "@/consts/speakers";
     },
     { threshold: 0.1 }
   );
-  observer.observe(headerButton);
+  observer.observe(form);
 </script>
