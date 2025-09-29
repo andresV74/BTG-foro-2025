@@ -61,13 +61,10 @@ import { speakersData } from "@/consts/speakers";
       const header = document.querySelector(".header") as HTMLElement;
       const headerHeight = header?.offsetHeight || 0;
 
-      if (form?.clientHeight === 0) {
-        window.scrollTo({
-          top: headerHeight,
-          behavior: "smooth",
-        });
-      }
-      form?.classList.toggle("visible");
+      window.scrollTo({
+        top: headerHeight,
+        behavior: "smooth",
+      });
     });
   });
 
